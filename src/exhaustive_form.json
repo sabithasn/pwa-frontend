@@ -1,0 +1,1497 @@
+{
+  "formId": "SAIC-J-6606",
+  "formTitle": "Instrument Cable - Installation, Termination, Identification and Pre-Commissioning",
+  "version": "2018.05",
+  "type": "inspection_form",
+  "meta": {
+    "scannable": true,
+    "qrPrefillEnabled": true,
+    "autoSave": true,
+    "approvalWorkflow": true
+  },
+  "sections": [
+    {
+      "sectionId": "equipment_details",
+      "sectionTitle": "Equipment Details",
+      "type": "fieldset",
+      "fields": [
+        {
+          "fieldId": "project_title",
+          "label": "Project Title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "fieldId": "wbs_number",
+          "label": "WBS / BI / JO NUMBER",
+          "type": "text",
+          "required": true
+        },
+        {
+          "fieldId": "contractor",
+          "label": "CONTRACTOR / SUBCONTRACTOR",
+          "type": "text",
+          "required": true
+        },
+        {
+          "fieldId": "equipment_id",
+          "label": "EQUIPMENT ID NUMBER(S)",
+          "type": "text",
+          "required": true
+        },
+        {
+          "fieldId": "equipment_desc",
+          "label": "EQUIPMENT DESCRIPTION",
+          "type": "text",
+          "required": false
+        },
+        {
+          "fieldId": "system_id",
+          "label": "SYSTEM ID",
+          "type": "text",
+          "required": true
+        },
+        {
+          "fieldId": "plant_no",
+          "label": "PLANT NO.",
+          "type": "text",
+          "required": true
+        },
+        {
+          "fieldId": "layout_drawing_no",
+          "label": "LAYOUT DRAWING NUMBER",
+          "type": "text",
+          "required": false
+        },
+        {
+          "fieldId": "inspection_datetime",
+          "label": "SCHEDULED INSPECTION DATE & TIME",
+          "type": "datetime",
+          "required": true
+        },
+        {
+          "fieldId": "saudi_aramco_tip",
+          "label": "SAUDI ARAMCO TIP NUMBER",
+          "type": "text",
+          "required": false
+        },
+        {
+          "fieldId": "saudi_aramco_activity",
+          "label": "SAUDI ARAMCO ACTIVITY NUMBER",
+          "type": "text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "sectionId": "inspection_checklist",
+      "sectionTitle": "Inspection Checklist",
+      "type": "table_group",
+      "sub_sections": [
+        {
+          "subSectionId": "A",
+          "subSectionTitle": "General Installation Requirement",
+          "type": "table",
+          "columns": [
+            {
+              "columnId": "item_no",
+              "label": "Item No.",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "acceptance_criteria",
+              "label": "Acceptance Criteria",
+              "type": "textarea",
+              "editable": false
+            },
+            {
+              "columnId": "reference",
+              "label": "Reference",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "pass",
+              "label": "PASS",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "fail",
+              "label": "FAIL",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "na",
+              "label": "N/A",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "re_insp_date",
+              "label": "RE-INSP DATE",
+              "type": "date",
+              "visibleIf": "fail"
+            }
+          ],
+          "rows": [
+            {
+              "item_no": "A1",
+              "acceptance_criteria": "Copper data link cables shall be specified per system manufacturers' recommendations.\nIn plant fiber optic data link cables shall be specified and installed per SAES-Z-020. If these cables are routed in aboveground conduit, the conduit shall be specified and installed per this standard and SAES-P-104.",
+              "reference": "SAES-J-902   Sec. 12.3.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "A2",
+              "acceptance_criteria": "All in plant process automation networks shall be redundant and shall be routed in separate cables. The primary cable shall follow a different route from the backup cable. Primary and backup data link cables shall preferentially enter cabinets or consoles from opposite sides.\nException:\nFiber Optic data link Cables may be routed with other instrumentation cables – in existing trays or ducts. Fiber Optic cables installed in trays shall be routed in PVC conduit and shall meet ANSI/ISA TR12.21.01 if installed in classified areas",
+              "reference": "SAES-J-902   sec. 12.3.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "A3",
+              "acceptance_criteria": "A conduit outlet box (e.g., GUAT) shall be installed within eighteen (18) inches of the field device. The cable to the instrument shall be looped one or more times within this fitting; the sizing of the conduit outlet box shall take into account the bending radius of the cable.",
+              "reference": "SAES-J-902   Sec. 8.3",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "A4",
+              "acceptance_criteria": "Flexible conduit shall be used at the instrument end of the conduit to provide isolation from vibration, protection against thermal expansion of the rigid conduit systems and for ease of maintenance.",
+              "reference": "SAES-J-902\nSec. 8.4",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "A5",
+              "acceptance_criteria": "All field junction boxes shall be mounted vertically i.e., the door shall open from left-to-right or from right-to-left.",
+              "reference": "SAES-J-902   Sec. 7.4",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "A6",
+              "acceptance_criteria": "Precast 50 mm thick red concrete tiles, red plastic tiles (12 mm minimum thickness), or PVC coated steel fence fabric shall be placed 300 mm above direct buried cable or direct buried conduit, in accordance with Standard Drawing AD-036874. In addition, a yellow warning tape shall be installed over the tiles or fence fabric. This paragraph does not apply to ground grid conductors and connections to ground grids or grounding electrodes, when paragraph 10.2 configurations are used, or under elevated substations.\n[SAES-P-104, Sec.10.3]",
+              "reference": "SAES-J-902   Sec. 3.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            }
+          ]
+        },
+        {
+          "subSectionId": "B",
+          "subSectionTitle": "Cable Trays - Installation Requirements",
+          "type": "table",
+          "columns": [
+            {
+              "columnId": "item_no",
+              "label": "Item No.",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "acceptance_criteria",
+              "label": "Acceptance Criteria",
+              "type": "textarea",
+              "editable": false
+            },
+            {
+              "columnId": "reference",
+              "label": "Reference",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "pass",
+              "label": "PASS",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "fail",
+              "label": "FAIL",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "na",
+              "label": "N/A",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "re_insp_date",
+              "label": "RE-INSP DATE",
+              "type": "date",
+              "visibleIf": "fail"
+            }
+          ],
+          "rows": [
+            {
+              "item_no": "B1",
+              "acceptance_criteria": "Cable tray specification shall be per NEMA VE 1. The tray installation shall be per this standard, NEMA VE 2 and SAES-P-104.\nRefer to SATIP-104-03.",
+              "reference": "SAES-J-902    Sec. 9.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "B2",
+              "acceptance_criteria": "Cable Trays shall be grounded as required in SAES-P-111.\nRefer to SATIP-P-111-01.",
+              "reference": "SAES-J-902    Sec. 9.5",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "B3",
+              "acceptance_criteria": "In new grass root projects, cable trays extending between the process area and the control room or process interface building, or trays installed beneath raised computer floors, in control rooms or PIB shall be sized for a minimum of 20% spare space for future expansions. This spare capacity is in addition to the installed 20% spare cabling.",
+              "reference": "SAES-J-902    Sec. 9.6",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "B4",
+              "acceptance_criteria": "Cable tray fill shall comply with NEC Article 392.",
+              "reference": "SAES-J-902    Sec. 9.7",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "B5",
+              "acceptance_criteria": "Cable tray supporting armored cables extending between field instruments and junction boxes shall be ventilated bottom, channel cable tray. The channel cable tray shall be designed, manufactured and marked in accordance with NEMA VE 1. The working load of the cable tray shall consist of the weight of the cables, plus a concentrated static load of 45 kg at the center of the span. The static load can be converted to an equivalent uniform load using the formula in NEMA VE 1. The overall working weight shall not exceed the rated load capacity of the cable tray as defined in NEMA VE 1.",
+              "reference": "SAES-J-902    Sec. 9.8",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "B6",
+              "acceptance_criteria": "In addition to the requirements in section 9.1 and 9.5, the channel cable tray system shall meet the following:\n9.8.1 The channel cable tray material shall be copper-free aluminum (aluminum with a maximum of 0.4% copper).\n9.8.2 Channel cable tray width shall be 3, 4 or 6 inches with a minimum loading depth of 1-¼ inch.\n9.8.3 The channel cable tray system shall be installed with the manufacturer's standard fittings, clamps, hangers, brackets, splice plates, reducer plates, blind ends, connectors and grounding straps.\n9.8.4 The channel cable tray system shall be installed with flanged covers.\n9.8.5 The ventilated strait sections shall have slots (approximately 3/16\" x ½\") to facilitate the use of cable ties to secure the cable(s). The slots shall repeat every 12-18 inches.\n9.8.6 The ventilated strait sections shall have splice holes, repeating every 12-18 inches to simplify field modifications.\n9.8.7 All fasteners (i.e., nuts, bolts, washers, etc.) used to connect and assemble the channel cable tray system shall be 304 SS. In severe corrosive environments, 316 SS fasteners shall be used.\n9.8.8 The channel cable tray system shall be free from burrs or other sharp projections that could cause damage to the cable jacket during installation.",
+              "reference": "SAES-J-902    Sec. 9.8.1~9.8.8",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            }
+          ]
+        },
+        {
+          "subSectionId": "C",
+          "subSectionTitle": "Installation Requirement of Fiber Optic Cables",
+          "type": "table",
+          "columns": [
+            {
+              "columnId": "item_no",
+              "label": "Item No.",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "acceptance_criteria",
+              "label": "Acceptance Criteria",
+              "type": "textarea",
+              "editable": false
+            },
+            {
+              "columnId": "reference",
+              "label": "Reference",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "pass",
+              "label": "PASS",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "fail",
+              "label": "FAIL",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "na",
+              "label": "N/A",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "re_insp_date",
+              "label": "RE-INSP DATE",
+              "type": "date",
+              "visibleIf": "fail"
+            }
+          ],
+          "rows": [
+            {
+              "item_no": "C1",
+              "acceptance_criteria": "Non-conductive optical fiber cables shall be permitted to occupy the same cable tray or raceway with conductors for electric light, power, Class 1, non–power-limited fire alarm, Type ITC or medium-power network-powered broadband communications circuits, operating at 600 volts or less.",
+              "reference": "NEC Article 770.133(A)",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "C2",
+              "acceptance_criteria": "Conductive optical fiber cables shall not be permitted to occupy the same cable tray or raceway with conductors for electric light, power, Class 1, non–power-limited fire alarm, Type ITC or medium-power network-powered broadband communications circuits.",
+              "reference": "NEC Article 770.133(A)",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "C3",
+              "acceptance_criteria": "Optical fibers in composite optical fiber cables containing only current-carrying conductors for electric light, power, Class 1 circuits rated 600 volts or less shall be permitted to occupy the same cabinet, cable tray, outlet box, panel, raceway or other termination enclosure with\nconductors for electric light, power or Class 1 circuits operating\nat 600 volts or less.",
+              "reference": "NEC Article 770.133(A)",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "C4",
+              "acceptance_criteria": "Nonconductive optical fiber cables shall not be permitted to occupy the same cabinet, outlet box, panel or similar enclosure housing the electrical terminations of an electric light, power, Class 1, non–power-limited fire alarm or medium power network-powered broadband communications circuit.",
+              "reference": "NEC Article 770.133(A)",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "C5",
+              "acceptance_criteria": "Conductive and nonconductive optical fiber cables shall be permitted in the same cable tray, enclosure, raceway or cable routing assembly with conductors of any of the following:\n(1) Communications circuits in compliance with Parts 1 and IV of Article 800\n(2) Community antenna television and radio distribution systems in compliance with Parts 1 and IV of Article 820\n(3) Low-power network-powered broadband communications circuits in compliance with Parts 1 and IV of Article 830",
+              "reference": "NEC Article 770.133(B)",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "C6",
+              "acceptance_criteria": "Hazardous (Classified) Locations:\nCables installed in hazardous (classified) locations shall be listed. Cables shall be sealed in accordance with the requirements of 501.15, 502.15, 505.16 or 506.16, as applicable. [See Attachment 2]",
+              "reference": "NEC Article 770.3(A)",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "C7",
+              "acceptance_criteria": "Cable Trays. The following cables and raceways shall\nbe permitted to be supported by cable trays:\n(1) Types OFNP, OFCP, OFNR, OFCR, OFNG, OFCG,\nOFN, and OFC cables\n(3) Types OFNP, OFCP, OFNR, OFCR, OFNG, OFCG,\nOFN, and OFC cables installed in:\na. Plenum optical fiber raceway\nb. Plenum communications raceway\nc. Riser optical fiber raceway\nd. Riser communications raceway\ne. General-purpose optical fiber raceway\nf. General-purpose communications raceway",
+              "reference": "NEC Article 770.113 (H)",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "C8",
+              "acceptance_criteria": "Grounding or Interruption of Non–Current-Carrying Metallic Members of Optical Fiber Cables:\nOptical fiber cables entering the building or terminating on the\noutside of the building shall comply with 770.93(A) or (B).",
+              "reference": "NEC Article 770.93",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            }
+          ]
+        },
+        {
+          "subSectionId": "D",
+          "subSectionTitle": "Communications Wires and Cables Installation Requirements",
+          "type": "table",
+          "columns": [
+            {
+              "columnId": "item_no",
+              "label": "Item No.",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "acceptance_criteria",
+              "label": "Acceptance Criteria",
+              "type": "textarea",
+              "editable": false
+            },
+            {
+              "columnId": "reference",
+              "label": "Reference",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "pass",
+              "label": "PASS",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "fail",
+              "label": "FAIL",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "na",
+              "label": "N/A",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "re_insp_date",
+              "label": "RE-INSP DATE",
+              "type": "date",
+              "visibleIf": "fail"
+            }
+          ],
+          "rows": [
+            {
+              "item_no": "D1",
+              "acceptance_criteria": "Hazardous (Classified) Locations:\nCommunications circuits and equipment installed in a location that is classified in accordance with 500.5 and 505.5 shall comply with\nthe applicable requirements of Chapter 5.",
+              "reference": "NEC Article   800.3 (A)",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "D2",
+              "acceptance_criteria": "Grounding or Interruption of Metallic Sheath Members of Communications Cables:\n Communications cables entering the building or terminating on the outside of the building shall comply with 800.93(A) or (B).",
+              "reference": "NEC Article 800.93",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "D3",
+              "acceptance_criteria": "Installation of Communications Wires, Cables and Equipment:\nCommunications wires and cables from the protector to the equipment or, where no protector is required, communications wires and cables attached to the outside or inside of the building shall comply with following:\n(A)(1)(c) Separation from other conductors; in Raceways, Cable Trays, Boxes and Cables; class 2 and class 3 circuit:\nClass 1 circuits shall not be run in the same cable with communications circuits.\n(A)(1)(d) Separation from other conductors; in Raceways, Cable Trays, Boxes and Cables; Electric Light, Power, Class 1, Non–Power-Limited\nFire Alarm, and Medium-Power Network-Powered Broadband\nCommunications Circuits in Raceways, Compartments\nand Boxes:\nCommunications conductors shall not be placed in any raceway, compartment, outlet box, junction box, or similar fitting with conductors of electric light, power, Class 1, non–power-limited fire alarm, or medium-power network-powered broadband communications circuits.",
+              "reference": "NEC Article 800.133(A)",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "D4",
+              "acceptance_criteria": "Other Applications:\nCommunications wires and cables shall be separated at least 50 mm (2 in.) from conductors of any electric light, power, Class 1, non–power-limited fire alarm or medium power network-powered broadband communications circuits.",
+              "reference": "NEC Article 800.133(A)(2)",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "D5",
+              "acceptance_criteria": "Communications Wires and Cables:\nCommunications wires and cables shall be listed in accordance with 800.179(A) through (I) and marked in accordance with Table 800.179 [See Attachment 3). Conductors in communications cables, other than in a coaxial cable, shall be copper. \nThe cable voltage rating shall not be marked on the cable or on\nthe undercarpet communications wire. Communications wires and cables shall have a temperature rating of not less than 60°C",
+              "reference": "NEC Article 800.179",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "D6",
+              "acceptance_criteria": "Equipment: Communications equipment shall be listed as being suitable for electrical connection to a communications network.",
+              "reference": "NEC Article 800.170",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "D7",
+              "acceptance_criteria": "Cable Trays:\nThe following wires, cables, and raceways shall be permitted to be supported by cable trays.                                                \n(1) Types CMP, CMR, CMG, and CM cables\n(3) communication wires and Types CMP, CMR & CM cables installed in:                                                                                                               a. Plenum communications raceway\nb. Riser communications raceway\nc. General-purpose communications raceway\nshall be permitted to be supported by cable trays:",
+              "reference": "NEC Article 800.113(H)",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            }
+          ]
+        },
+        {
+          "subSectionId": "E",
+          "subSectionTitle": "Routing Requirements of Instrument and Control Cables and Data Highways",
+          "type": "table",
+          "columns": [
+            {
+              "columnId": "item_no",
+              "label": "Item No.",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "acceptance_criteria",
+              "label": "Acceptance Criteria",
+              "type": "textarea",
+              "editable": false
+            },
+            {
+              "columnId": "reference",
+              "label": "Reference",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "pass",
+              "label": "PASS",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "fail",
+              "label": "FAIL",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "na",
+              "label": "N/A",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "re_insp_date",
+              "label": "RE-INSP DATE",
+              "type": "date",
+              "visibleIf": "fail"
+            }
+          ],
+          "rows": [
+            {
+              "item_no": "E1",
+              "acceptance_criteria": "Cable between field instruments and junction box shall be routed above ground.",
+              "reference": "SAES-J-902\nSec. 13.1.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "E2",
+              "acceptance_criteria": "Aboveground Routing - Instrument to Field JB - Cable & Conduit:  Single twisted pair/triad cables, per Table-2, shall be installed in steel conduits from the field instruments to the field junction boxes. Low-point drains and breathers shall be provided as required on all conduits. Conduit installation shall be per Section 8 SAES-J-902 .",
+              "reference": "SAES-J-902\nSec. 13.1.1.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "E3",
+              "acceptance_criteria": "Aboveground Routing - Armored Cable and Tray:\na) Armored instrumentation cable shall be routed on a cable tray per Section 9.8.Single pair cables (armored or non-armored) shall not be routed on ladder cable trays\nb) The armored cable shall be routed independently of existing overhead tray systems used for \"home-run\" cables.\nc) The unsupported end of the cable at the instrument shall be looped; this loop shall take into account the bending radius of the cable. The unsupported length of cable at the instrument shall be the minimum length required to provide the service loop.\nCommentary Note:\nThis unsupported loop in the armored cable is required to provide sufficient slack for cable gland make-up and for easy removal of the cable from the device for future instrument change-out.\nd) The cable shall be either galvanized steel wire armor or galvanized steel interlocking armor, per 34-SAMSS-913.",
+              "reference": "SAES-J-902\nSec. 13.1.1.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "E4",
+              "acceptance_criteria": "Routing - Field Junction Box to Control Room Marshaling Cabinets: Cables between field junction boxes and marshaling cabinets may be routed in conduits, on trays or direct buried. For direct burial, the trench shall be constructed per SAES-P-104. Twisted, multi-pair/triad cables per Table 2 shall be used. The use of armored cables for homerun application is not recommended. However, if they are used, the cables shall be terminated using glands per paragraph 6.2 at both ends. In addition, the armor shall be grounded at both ends.",
+              "reference": "SAES-J-902\nSec. 13.1.2.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "E5",
+              "acceptance_criteria": "All signal wiring from field cables shall terminate in dedicated marshaling cabinets. Marshaling cabinets shall comply with 34-SAMSS-820, Instrument Control Cabinets – Indoor.\nException: Wiring for millivolt, microamp, pulse and frequency signals under one Volt such as thermocouples, vibration elements, load cells, thermistor elements and transmitters with pulse outputs may be directly connected to the I/O unless otherwise specified.",
+              "reference": "SAES-J-902\nSec. 13.1.2.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "E6",
+              "acceptance_criteria": "Each cable or group of cables carrying similar signals shall contain a minimum of 20% spare pairs or triads. The number of pairs/triads in a given cable shall be dictated by usage and spare requirements and the manufacturers' standard offerings.",
+              "reference": "SAES-J-902\nSec. 13.1.2.3",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "E7",
+              "acceptance_criteria": "All spare pairs/triads of a multi-pair/triad cable shall be terminated at both the field junction box and the marshaling cabinet. Drain wires for spare shielded pairs/triads shall also be individually terminated at these locations.",
+              "reference": "SAES-J-902\nSec. 13.1.2.4",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "E8",
+              "acceptance_criteria": "Cables entering the marshaling cabinet shall be cut to the appropriate lengths. Coiling extra cable length or spare pairs/triads beneath the marshaling cabinet is not acceptable. \nException: For wiring directly connected to the I/O, per the exception item in section 13.1.2.2, the spare pairs/triads may be neatly coiled & taped beneath the cabinet.",
+              "reference": "SAES-J-902\nSec. 13.1.2.5",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "E9",
+              "acceptance_criteria": "All conductors/pairs, from each field cable, shall be terminated adjacent to each other on the same terminal strip in the marshaling cabinet.",
+              "reference": "SAES-J-902\nSec. 13.1.2.6",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "E10",
+              "acceptance_criteria": "Routing: Cables connecting marshaling cabinet terminals to control room instrumentation and control systems shall conform to the requirements of Section 13.1.2, above. Where possible and practical, pre-assembled cables with plug-in type connectors shall be used for interconnections. Wiring lists identifying pin connections shall be required for each pre-assembled cable.",
+              "reference": "SAES-J-902\nSec. 13.1.3.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "E11",
+              "acceptance_criteria": "Wiring requirements for distributed control systems (DCS) are detailed in 23-SAMSS-010.",
+              "reference": "SAES-J-902\nSec. 13.1.3.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "E12",
+              "acceptance_criteria": "Underground\nIf requirements exist to protect against fire damage, underground routing may be considered for branch cables. For home-run cables, direct burial is allowed and shall be in accordance with SAES-P-104, Wiring Methods and Materials, and paragraph 13.1.2.1 of this standard",
+              "reference": "SAES-J-902\nSec. 13.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            }
+          ]
+        },
+        {
+          "subSectionId": "F",
+          "subSectionTitle": "Cable Entry Requirements in Control Buildings and Hydrocarbon Processing Plants",
+          "type": "table",
+          "columns": [
+            {
+              "columnId": "item_no",
+              "label": "Item No.",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "acceptance_criteria",
+              "label": "Acceptance Criteria",
+              "type": "textarea",
+              "editable": false
+            },
+            {
+              "columnId": "reference",
+              "label": "Reference",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "pass",
+              "label": "PASS",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "fail",
+              "label": "FAIL",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "na",
+              "label": "N/A",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "re_insp_date",
+              "label": "RE-INSP DATE",
+              "type": "date",
+              "visibleIf": "fail"
+            }
+          ],
+          "rows": [
+            {
+              "item_no": "F1",
+              "acceptance_criteria": "Penetration of the wall of the building basement or underfloor space shall be via short horizontal sections of PVC conduits (sleeves) that will be encased or grouted into the wall. [SAES-P-104, Sec 15.4.1]",
+              "reference": "SAES-J-902 Sec.13.1.2.8",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "F2",
+              "acceptance_criteria": "The inside of the sleeves shall be sealed to provide fire retardancy on the building interior side. [SAES-P-104, Sec.15.4.2]",
+              "reference": "SAES-J-902 Sec.13.1.2.8",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "F3",
+              "acceptance_criteria": "The cables outside the building shall be direct buried for a distance of at least 2 meters. [SAES-P-104,Sec 15.4.3 (see also paragraph 10.14)]",
+              "reference": "SAES-J-902 Sec.13.1.2.8",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "F4",
+              "acceptance_criteria": "Multi-conductor cable penetrations shall be made with intact cable jackets. If individual conductors are required to be sealed by other Saudi Aramco standards, the sealing shall be done at the most convenient location inside the building.[SAES-P-104, Sec 15.4.4]",
+              "reference": "SAES-J-902 Sec.13.1.2.8",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "F5",
+              "acceptance_criteria": "Commentary 15.4:\nIf cables or conduits entering buildings are required to be sealed by the NEC, sealing must meet requirements of the NEC and paragraphs 15.1, 15.2 and/or 15.3 above. [SAEP-P-104, Sec.15.4.4]",
+              "reference": "SAES-J-902 Sec.13.1.2.8",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "F6",
+              "acceptance_criteria": "Emergency shutdown system (ESD) wiring shall have dedicated cabling, junction boxes and marshaling cabinets. \nException: For offshore platforms only, ESD system wiring may be terminated in the same junction box as general instrumentation wiring. provided that the signals are of the same type. ESD and non-ESD terminals shall be segregated within the junction box and shall be clearly identified.",
+              "reference": "SAES-J-902\nSec. 13.1.2.9",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "F7",
+              "acceptance_criteria": "Wiring for intrinsically safe (IS) systems shall be segregated and installed in dedicated conduit or cable tray and terminated in dedicated junction boxes. For additional details refer to SATIP-J-903-01.",
+              "reference": "SAES-J-902\nSec. 13.1.2.10",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            }
+          ]
+        },
+        {
+          "subSectionId": "H",
+          "subSectionTitle": "Terminations/Connections at Field Instruments and Junction Boxes",
+          "type": "table",
+          "columns": [
+            {
+              "columnId": "item_no",
+              "label": "Item No.",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "acceptance_criteria",
+              "label": "Acceptance Criteria",
+              "type": "textarea",
+              "editable": false
+            },
+            {
+              "columnId": "reference",
+              "label": "Reference",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "pass",
+              "label": "PASS",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "fail",
+              "label": "FAIL",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "na",
+              "label": "N/A",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "re_insp_date",
+              "label": "RE-INSP DATE",
+              "type": "date",
+              "visibleIf": "fail"
+            }
+          ],
+          "rows": [
+            {
+              "item_no": "H1",
+              "acceptance_criteria": "Connections at Field Instruments:\n(1) All connections at the field instrument shall be made on screw type terminal blocks. Wire nuts and spring type terminals shall not be used. Instruments with integral terminal blocks shall be connected directly to the field cable. \n(2) If the instrument is fitted with factory sealed fly leads then they shall be connected to a screw type terminal block installed in a GUA conduit fitting. A typical installation arrangement is shown in Library Drawing DC-950043. [See attachment 4]",
+              "reference": "SAES-J-902\nSec. 10.1, 10.1.1 & 10.1.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "H2",
+              "acceptance_criteria": "The outer jacket of shielded twisted single pair/triad cables shall be left intact up to the point of termination. Drain wires and mylar shields on shielded cables shall be cut and insulated with heat shrink sleeve at the field instrument unless otherwise specified by the instrument manufacturer.",
+              "reference": "SAES-J-902\nSec. 10.1.3",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "H3",
+              "acceptance_criteria": "Connections at Field Junction Boxes:\nAll instrument wiring shall be routed to field junction boxes. Conduit and cable entries to field junction boxes shall be through the bottom. Top entry is allowable provided a drain seal is installed on the conduit within 18\" of the enclosure. Side entry (within six inches of the bottom) shall be permitted only when space limitations dictate. The number of conduit entries shall be kept to a minimum. All unused entry ports shall be fitted with approved plugs.",
+              "reference": "SAES-J-902\nSec. 10.2.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "H4",
+              "acceptance_criteria": "Conduit entries shall be through gasketed hubs, except in explosion-proof installations where the connection shall be through threaded connections. Armored cable entry to the junction boxes shall be per paragraph 6.2. Top entry of armored cable into the junction box is not acceptable.",
+              "reference": "SAES-J-902\nSec. 10.2.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "H5",
+              "acceptance_criteria": "In severe corrosive environments, cable glands shall be protected against corrosion, either by a heat shrink sleeve, anti corrosion tape or PVC shroud. Gasket materials shall be oil resistant.",
+              "reference": "SAES-J-902\nSec. 10.2.3",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "H6",
+              "acceptance_criteria": "All connections and entries shall comply with the electrical area classification.",
+              "reference": "SAES-J-902\nSec. 10.2.4",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "H7",
+              "acceptance_criteria": "Low point conduit drains shall be provided as needed.",
+              "reference": "SAES-J-902\nSec. 10.2.5",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "H8",
+              "acceptance_criteria": "Twisted, multi-pair/triad cables shall be cut to the appropriate length to minimize looping and flexing of the cable within the junction box.",
+              "reference": "SAES-J-902\nSec. 10.2.6",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "H9",
+              "acceptance_criteria": "For twisted shielded single pair/triad cables the outer jacket shall be left intact up to the point-of-termination (approximately three to four inches from terminal blocks). The shield drain wire shall be insulated from jacket end to terminal. Approximately, one inch of heat shrink tubing shall be applied over the jacket end.",
+              "reference": "SAES-J-902\nSec. 10.2.7",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "H10",
+              "acceptance_criteria": "For individually shielded twisted multi-pair/triad cables each pair/triad shall be heat shrink sleeve insulated from the cable-jacket-end up to the point-of-termination to keep the foil shielding intact and free from accidental grounds. The shield drain wire shall be insulated from foil end to terminal. Approximately, two inches of heat shrink tubing shall be applied over the jacket end.",
+              "reference": "SAES-J-902\nSec. 10.2.8",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            }
+          ]
+        },
+        {
+          "subSectionId": "J",
+          "subSectionTitle": "Terminations/Terminal Block Requirements",
+          "type": "table",
+          "columns": [
+            {
+              "columnId": "item_no",
+              "label": "Item No.",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "acceptance_criteria",
+              "label": "Acceptance Criteria",
+              "type": "textarea",
+              "editable": false
+            },
+            {
+              "columnId": "reference",
+              "label": "Reference",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "pass",
+              "label": "PASS",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "fail",
+              "label": "FAIL",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "na",
+              "label": "N/A",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "re_insp_date",
+              "label": "RE-INSP DATE",
+              "type": "date",
+              "visibleIf": "fail"
+            }
+          ],
+          "rows": [
+            {
+              "item_no": "J1",
+              "acceptance_criteria": "Terminal blocks shall be channel (rail) mounted, strip type, with tubular box clamp connector and compression bar or yoke for wire termination. As a minimum, the thickness of the terminals shall be 5 mm or higher. Multi-deck and spring type terminal blocks are not acceptable.",
+              "reference": "SAES-J-902\nSec. 15.2.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "J2",
+              "acceptance_criteria": "Terminals and terminal block accessories (e.g., DIN rail mounting brackets for electrical insulation, busbar support blocks, end brackets, etc.) shall be made of fire retardant, halogen free, high strength material such as polyamide or equivalent in accordance with UL 94, V0. Brittle materials such as melamine shall not be used.",
+              "reference": "SAES-J-902\nSec. 15.2.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "J3",
+              "acceptance_criteria": "The termination shall be channel (rail) mounted, strip-type terminal blocks, with tubular box clamp connector and compression bar or yoke, as detailed in Paragraph 15.2.",
+              "reference": "SAES-J-902\nSec. 15.1.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "J4",
+              "acceptance_criteria": "When screw-type terminals are provided, solder less crimp/compression connectors shall be used for connecting stranded copper conductors. Screw-type terminals are defined as those in which the termination method involves the direct compression of the conductor by the underside of the screw head, and which do not contain the conductor within a clamp or yoke. Insulated ring lugs or locking fork connectors, specifically designed to hold the connector on the terminal in the event of loosening of the terminal screw, shall be used on all such connections. Exposed electrical connections at signal lamps and pushbuttons shall be completely shrouded by removable, insulating covers.",
+              "reference": "SAES-J-902\nSec. 15.1.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "J5",
+              "acceptance_criteria": "Fused terminals shall be equipped with blown fuse visual indication. The disconnect levers for fused terminals and knife- switch terminals shall be hinged.",
+              "reference": "SAES-J-902\nSec. 15.2.3",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "J6",
+              "acceptance_criteria": "Wires terminated on these terminal blocks shall not have the bare ends coated with or dipped in solder (\"tinned\"). However, termination of wiring that has individual strands of the copper conductor tinned during manufacture (typical of shield drain wires or for corrosion protection) is acceptable. Direct termination of the bare wire end is acceptable. No more than two bare wire ends shall be connected to each side of a single terminal block.",
+              "reference": "SAES-J-902\nSec. 15.2.4",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "J7",
+              "acceptance_criteria": "The use of crimp-on ferrules for this type of termination shall follow manufacturer's guidelines. Ferrules shall be provided with plastic insulating collars. Two-wire ferrules are acceptable. However, the use of ferrules to daisy chain is not acceptable. Only one ferrule shall be connected to each side of a single terminal block.",
+              "reference": "SAES-J-902\nSec. 15.2.5",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "J8",
+              "acceptance_criteria": "Terminal strip spacing shall allow ample room for plastic wire ducts and permit training and lacing of cables, and fanning of individual wires to termination points. Each terminal strip shall be labeled above or below with the terminal strip number, as shown on wiring diagrams.",
+              "reference": "SAES-J-902\nSec. 15.3.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "J9",
+              "acceptance_criteria": "Terminals for similar (AC or DC) current service shall be grouped together and physically separated from terminals for different service by means of dividers, separate mounting rails or separate enclosures.",
+              "reference": "SAES-J-902\nSec. 15.3.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "J10",
+              "acceptance_criteria": "Terminals for 120 VDC and 120 VAC power for field contacts shall be segregated from other systems.",
+              "reference": "SAES-J-902\nSec. 15.3.3",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "J11",
+              "acceptance_criteria": "Terminal strips for ESD wiring shall be completely separate from all other wiring including power, control and instrumentation.",
+              "reference": "SAES-J-902\nSec. 15.3.4",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            }
+          ]
+        },
+        {
+          "subSectionId": "K",
+          "subSectionTitle": "Identification and Wire Tagging Requirements",
+          "type": "table",
+          "columns": [
+            {
+              "columnId": "item_no",
+              "label": "Item No.",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "acceptance_criteria",
+              "label": "Acceptance Criteria",
+              "type": "textarea",
+              "editable": false
+            },
+            {
+              "columnId": "reference",
+              "label": "Reference",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "pass",
+              "label": "PASS",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "fail",
+              "label": "FAIL",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "na",
+              "label": "N/A",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "re_insp_date",
+              "label": "RE-INSP DATE",
+              "type": "date",
+              "visibleIf": "fail"
+            }
+          ],
+          "rows": [
+            {
+              "item_no": "K1",
+              "acceptance_criteria": "All wiring shall be tagged at each end. Each wire tag shall have two labels. The first label (closest to the end of the wire) shall identify the terminal number to which the wire is physically connected. The other label shall be the terminal number of the connection of the opposite end of the wire.",
+              "reference": "SAES-J-902\nSec. 16.1.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "K2",
+              "acceptance_criteria": "Wire tag information shall be permanently marked in block alpha numeric or typed on tubular, heat-shrinkable, slip-on sleeves. Wrap-around, snap-on or self-adhesive wire markers shall not be used. Handwritten wire tags are not acceptable.",
+              "reference": "SAES-J-902\nSec. 16.1.3",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "K3",
+              "acceptance_criteria": "A clear heat shrink sleeve shall be installed over the wire tag for all instruments that use rust preventive grease on its threaded wiring access cover.",
+              "reference": "SAES-J-902\nSec. 16.1.4",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "K4",
+              "acceptance_criteria": "Spare pairs/triads in multi-pair/triad cables shall be labeled \"Spare\" in addition to the destination and source terminal numbers. The \"Spare\" designation shall be on a separate wire tag installed on the twisted pair and not part of the source/destination tag.",
+              "reference": "SAES-J-902\nSec. 16.1.5",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "K5",
+              "acceptance_criteria": "Cable Tagging:\nAll cables shall be tagged, at each end, with a cable-tag.",
+              "reference": "SAES-J-902\nSec. 16.2.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "K6",
+              "acceptance_criteria": "Homerun cables shall be tagged with the assigned \"IC\" cable number.",
+              "reference": "SAES-J-902\nSec. 16.2.1.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "K7",
+              "acceptance_criteria": "Cable tags outside junction boxes and marshalling cabinets shall be 316 SS with permanently marked alphanumeric characters i.e., raised or stamped characters. The cable tag shall be securely attached to the cable with stainless-steel cable ties. Where cable tags are required inside junction boxes or marshalling cabinets (i.e. cables extended in conduits), weather resistant, high quality plastic cable tags secured using cable ties per Paragraph 5.7.2 may be used.",
+              "reference": "SAES-J-902\nSec. 16.2.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "K8",
+              "acceptance_criteria": "Terminal Reference: Each row of terminals shall be uniquely identified alphanumerically, e.g., TS-101, TS-102, etc.",
+              "reference": "SAES-J-902\nSec. 16.3.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "K9",
+              "acceptance_criteria": "The terminals in each row shall be sequentially numbered starting at number one (1).",
+              "reference": "SAES-J-902\nSec. 16.3.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            }
+          ]
+        },
+        {
+          "subSectionId": "M",
+          "subSectionTitle": "Grounding Requirements",
+          "type": "table",
+          "columns": [
+            {
+              "columnId": "item_no",
+              "label": "Item No.",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "acceptance_criteria",
+              "label": "Acceptance Criteria",
+              "type": "textarea",
+              "editable": false
+            },
+            {
+              "columnId": "reference",
+              "label": "Reference",
+              "type": "text",
+              "editable": false
+            },
+            {
+              "columnId": "pass",
+              "label": "PASS",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "fail",
+              "label": "FAIL",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "na",
+              "label": "N/A",
+              "type": "checkbox"
+            },
+            {
+              "columnId": "re_insp_date",
+              "label": "RE-INSP DATE",
+              "type": "date",
+              "visibleIf": "fail"
+            }
+          ],
+          "rows": [
+            {
+              "item_no": "M1",
+              "acceptance_criteria": "(1) Both safety ground and instrumentation circuit ground must conform to NEC, Article 250. \n(2) Grounding system recommendations and requirements provided by manufacturers of instrumentation and control systems (e.g., distributed control systems and ESD Systems) shall also be taken into consideration.",
+              "reference": "SAES-J-902\nSec. 17.1.3 & 17.1.4",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "M2",
+              "acceptance_criteria": "Safety Ground:\nAll exposed non-current-carrying metallic parts that could become energized with hazardous potentials must be reliably connected to the equipment grounding circuits. Therefore, all metal equipment and enclosures within a panel or series of panels (i.e., instrument cases, hinged doors, racks, etc.) shall be bonded with bonding jumpers and connected to a safety ground bus with a minimum copper wire size of 4 mm² cross-sectional area. Two copper conductors, 25 mm² minimum, shall be connected from the safety ground bus to a single tie point on the safety ground grid in a closed loop configuration. Safety ground connections must be made such that when a case-grounded instrument is removed, the integrity of the rest of the safety ground system is maintained.",
+              "reference": "SAES-J-902\nSec. 17.2.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "M3",
+              "acceptance_criteria": "Enclosures for field instruments shall be grounded as follows:\nInstruments Operating at Greater Than 50 Volts:\nThe enclosures for instrument devices operating at 120 V AC or 125 VDC shall be grounded per SAES-P-111.",
+              "reference": "SAES-J-902\nSec. 17.2.2.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "M4",
+              "acceptance_criteria": "Enclosures for field instruments shall be grounded as follows:\nInstruments Operating at Less than 50 VDC:\nThe enclosures of instrument devices operating at 50 VDC or less may be grounded using one of the following options:\n(a) connecting the enclosures directly to the grid using 25 mm² ground wire.\n(b) Connecting the enclosure to a grounded instrument stand or other supporting structure, provided that the instrument device is properly fastened and the mounting clamp is mechanically and electrically in intimate contact with the stand. \n(c) Using the conduit as a ground conductor, provided that the conduit system is continuous and properly grounded. A bonding jumper shall be used across any flexible conduit at the instrument end. All conduit fittings shall be listed as suitable for grounding. \n(d) Using the cable armor (assuming armored cable is used) provided that the following criteria are met: \n  1) The armor construction is suitable as a grounding path per the NEC.\n  2) The cable glands, on each end of the armored cable, shall be designed to bond the armor to the gland (i.e., listed as suitable for grounding). \n  3) The armored cable runs in one continuous length from a properly grounded junction box to the device being grounded, i.e., no splices are permitted. \n  4) The armored cable is not in direct contact with the soil for any portion of the run.",
+              "reference": "SAES-J-902\nSec. 17.2.2.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "M5",
+              "acceptance_criteria": "Instrument DC & Shield Ground: \nThe purpose of instrument DC & Shield ground bus bar is to reduce the effect of electrical interference upon the signal being transmitted. A DC & Shield ground bus bar shall be provided within each cabinet for consolidating instrument signal commons and cable shield drain wires. This ground bus shall be isolated from the safety ground system and from the body of the cabinet except at the plant reference point as shown in Library Drawing DC-950150.",
+              "reference": "SAES-J-902\nSec. 17.3.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "M6",
+              "acceptance_criteria": "Each instrument signal common shall be connected to the isolated instrument DC & Shield ground bus with copper wire sized to carry the expected fault current or 12 AWG, whichever is larger. Two insulated copper conductors, 25 mm² minimum, shall be connected from the instrument DC & Shield ground bus within each cabinet to a single tie point on the Master Instrument Ground bar (MIG) within the control building in a closed loop configuration. The resistance from the isolated instrument DC & Shield ground bus to the plant ground grid shall be less than 1 ohm.",
+              "reference": "SAES-J-902\nSec. 17.3.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "M7",
+              "acceptance_criteria": "Grounding within Control and Process Interface Buildings:             In cases where there are many ground buses such as in control or process interface buildings, isolated instrument DC & Shield ground bars from all cabinets shall be consolidated into a Master Instrument Ground Bus (MIG) located within that building. Similarly, AC ground bus bars shall be consolidated into a Master Safety Ground Bus (MSG).",
+              "reference": "SAES-J-902\nSec. 17.4.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "M8",
+              "acceptance_criteria": "The Master instrument ground bar shall be connected to the PAS Master Reference Ground (MRG). The MRG should then be connected in a loop configuration to a single point on the plant grounding grid as shown in Library Drawing DC-950150.",
+              "reference": "SAES-J-902\nSec. 17.4.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "M9",
+              "acceptance_criteria": "Master Safety ground shall be connected directly to the plant grounding grid, as mandated by IEEE 1100. The connection to the plant grid shall be in a loop configuration as detailed in Library Drawing DC-950150.",
+              "reference": "SAES-J-902\nSec. 17.4.3",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "M10",
+              "acceptance_criteria": "The connections of the ground wires to the ends of the cabinet bus bars and to the building master ground bars (MIG & MSG) shall be via suitable screw-type compression ring lugs.",
+              "reference": "SAES-J-902\nSec. 17.4.5",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "M11",
+              "acceptance_criteria": "Special Considerations: \nSome equipment (data highways, computers, distributed control systems, etc.) may require special provisions for grounding. Manufacturers' recommendations should be carefully evaluated at all times.",
+              "reference": "SAES-J-902\nSec. 17.5",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "M12",
+              "acceptance_criteria": "Ground Fault Detection:\nWhen critical control systems, i.e., emergency shutdown (ESD) systems, utilize fully floating DC power where both positive and negative buses are isolated from earth ground, a selective ground fault detection system shall be incorporated to detect leakage current from field I/O wiring to ground.",
+              "reference": "SAES-J-902\nSec. 17.6.1",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            },
+            {
+              "item_no": "M13",
+              "acceptance_criteria": "Due care must be taken to ensure that circuits from one ground fault selector switch will not be cross-connected to circuits from any other ground fault selector switch (e.g., at common annunciator points, lamp test connections).",
+              "reference": "SAES-J-902\nSec. 17.6.2",
+              "pass": false,
+              "fail": false,
+              "na": false,
+              "re_insp_date": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "reference_documents",
+      "sectionTitle": "Reference Documents",
+      "type": "info_list",
+      "items": [
+        "1. Schedule G - Material, Tools and Equipment (Pro Forma MP-IK-LS Contract)",
+        "2. Schedule Q - Quality Requirements (Pro Forma Contract), project specific",
+        "3. SAES-J-902 - Electrical Systems for Instrumentation, 1 January 2018",
+        "4. 34-SAMSS-913 - Instrumentation and Thermocouple Cable, 2 August 2017",
+        "5. NFPA 70 - National Electric Code 2017",
+        "6. SAES-Z-020 - Design and Installation of Fiber Optic Cable Systems for Process Control Networks,,1 January 2018",
+        "7. SAES-P-104 - Wiring Methods & Materials, 24 February 2014"
+      ]
+    },
+    {
+      "sectionId": "attachments",
+      "sectionTitle": "Attachments",
+      "type": "file_upload_group",
+      "fields": [
+        {
+          "fieldId": "attachment_1",
+          "label": "Attachment 1 (Optical Fiber Substitution)",
+          "type": "file",
+          "multiple": true,
+          "allowedFormats": [
+            "pdf",
+            "jpg",
+            "png"
+          ]
+        },
+        {
+          "fieldId": "attachment_2",
+          "label": "Attachment 2 (Optical Fiber Markings)",
+          "type": "file",
+          "multiple": true,
+          "allowedFormats": [
+            "pdf",
+            "jpg",
+            "png"
+          ]
+        },
+        {
+          "fieldId": "attachment_3",
+          "label": "Attachment 3 (Communications Wires and Cables)",
+          "type": "file",
+          "multiple": true,
+          "allowedFormats": [
+            "pdf",
+            "jpg",
+            "png"
+          ]
+        },
+        {
+          "fieldId": "attachment_4",
+          "label": "Attachment 4 (Electrical Connections)",
+          "type": "file",
+          "multiple": true,
+          "allowedFormats": [
+            "pdf",
+            "jpg",
+            "png"
+          ]
+        }
+      ]
+    },
+    {
+      "sectionId": "approvals",
+      "sectionTitle": "Approval Signatures",
+      "type": "signature_group",
+      "roles": [
+        {
+          "roleId": "qc_inspector",
+          "roleName": "QC Inspector (Contractor / Third-Party)",
+          "fields": [
+            {
+              "fieldId": "name",
+              "label": "Name, Initials and Date",
+              "type": "text"
+            },
+            {
+              "fieldId": "action",
+              "label": "Action",
+              "type": "radio",
+              "options": [
+                "Performed Inspection"
+              ]
+            },
+            {
+              "fieldId": "signature",
+              "label": "Signature",
+              "type": "signature_pad"
+            }
+          ]
+        },
+        {
+          "roleId": "pid_representative",
+          "roleName": "PID Representative (Saudi Aramco)",
+          "fields": [
+            {
+              "fieldId": "name",
+              "label": "Name, Initials and Date",
+              "type": "text"
+            },
+            {
+              "fieldId": "action",
+              "label": "Action",
+              "type": "checkbox_group",
+              "options": [
+                "T&I Witnessed",
+                "QC Record Reviewed",
+                "Work Verified"
+              ]
+            },
+            {
+              "fieldId": "signature",
+              "label": "Signature",
+              "type": "signature_pad"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
